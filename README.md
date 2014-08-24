@@ -1,26 +1,32 @@
 dotfiles.git
 ============
-Clone and run this on a new EC2 instance running Ubuntu 12.04.2 LTS to
-configure your `bash` and `emacs` development environment as follows:
+Clone and run on a new EC2 instance.
 
-This file is modeled off of:
-git clone https://github.com/startup-class/dotfiles.git
+Configures...
+
+ -bash
+ -emacs
+ -vim
+
+...development environments as follows:
+
 
 
 ```sh
 cd $HOME
-git clone https://github.com/mattbeckstead/dotfiles.git
+git clone https://github.com/mattbeckstead/startup-eng-dotfiles.git
+mv startup-eng-dotfiles/ dotfiles/
 ln -sb dotfiles/.screenrc .
 ln -sb dotfiles/.bash_profile .
 ln -sb dotfiles/.bashrc .
 ln -sb dotfiles/.bashrc_custom .
 mv .emacs.d .emacs.d~
 ln -s dotfiles/.emacs.d .
-ls -s dotfiles/.vimrc .
 ```
 
 
 
+This script is based off of git clone https://github.com/startup-class/dotfiles.git
 
 See also http://github.com/startup-class/setup to install prerequisite
 programs. If all goes well, in addition to a more useful prompt, now you can
