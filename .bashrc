@@ -225,3 +225,15 @@ fi
 
 ## Define any user-specific variables you want here.
 source ~/.bashrc_custom
+
+
+# function to fetch the currect git branch
+#parse_git_branch(){
+#  git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* (.*)/(1)/'
+#}
+
+
+# Custom BASH Shell Prompt:
+export PS1="\[\033[0;32m\][\u: \\W/] $\[\033[0m\] "
+# export PS1="\[\033[0;32m\][\u: \\W/ [0;34m\]$parse_git_branch)[0;32m\]] $\[\033[0m\] "
+# export PS1=" [33[00m][\u: \\W] [33[31m]$(parse_git_branch) [33[00m]$[33[00m] "
